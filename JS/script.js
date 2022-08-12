@@ -33,7 +33,7 @@ for (let h = 0; h <= 2; h++) {
 let algo = false
 let pago = false
 let total = 0
-const Alicuotas = [1.105, 1.21]
+
 class Articulos {
     constructor(nombre, valor, IVA) {
         this.nombre = nombre,
