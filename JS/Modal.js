@@ -1,48 +1,47 @@
 //Modal Carrito
 
 const modalContenedor = document.querySelector('.modalCont')
-const abrirCarrito = document.getElementById('abrirCar')
-const cerrarCarrito = document.getElementById('cerrar')
-const modalCarrito = document.querySelector('.modProductos')
+abrirCarrito = document.getElementById('abrirCar')
+cerrarCarrito = document.getElementById('cerrar')
+modalCarrito = document.querySelector('.modProductos')
 
 
-abrirCarrito.addEventListener('click', ()=> {
+abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
 })
 
-cerrarCarrito.addEventListener('click', ()=> {
+cerrarCarrito.addEventListener('click', () => {
     modalContenedor.classList.remove('modal-active')
 })
 
-modalContenedor.addEventListener('click',() =>{
+modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click();
 })
 
-modalCarrito.addEventListener('click', (elemento) =>{
+modalCarrito.addEventListener('click', (elemento) => {
     elemento.stopPropagation();
 })
 
 //Modal Inicio
 
 const InicioContenedor = document.querySelector('.Modal-Cont-Inicio')
-const abrirInicio = document.getElementById('ing')
-const cerrarInicio = document.getElementById('cerrarInicio')
-const modalInicio = document.querySelector('.Modal-Inicio')
+abrirInicio = document.getElementById('ing')
+cerrarInicio = document.getElementById('cerrarInicio')
+modalInicio = document.querySelector('.Modal-Inicio')
 
 
-abrirInicio.addEventListener('click', ()=> {
+abrirInicio.addEventListener('click', () => {
     InicioContenedor.classList.toggle('modal-active')
 })
 
-cerrarInicio.addEventListener('click', ()=> {
+cerrarInicio.addEventListener('click', () => {
     InicioContenedor.classList.remove('modal-active')
 })
 
-InicioContenedor.addEventListener('click',() =>{
+InicioContenedor.addEventListener('click', () => {
     cerrarInicio.click();
 })
 
-modalInicio.addEventListener('click', (e) =>{
+modalInicio.addEventListener('click', (e) => {
     e.stopPropagation();
 })
-

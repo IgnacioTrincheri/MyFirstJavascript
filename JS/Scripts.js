@@ -1,20 +1,22 @@
 let FormIngreso = document.querySelector("#formulario");
-const ClickIngreso = document.querySelector("#IngresarBtn");
-const btnSalir = document.getElementById('salirBtn')
-const btnBorrarLocal = document.getElementById('BorrarLocal')
-let userPass = "Avicola";
-let pase = false;
-let ingreso = false;
-let botonRecordame = document.getElementById('RememberMe')
-let botonGuardar = document.getElementById('guardarCarrito')
+userPass = "Avicola";
+pase = false;
+ingreso = false;
+i = 2
+botonRecordame = document.getElementById('RememberMe')
+botonGuardar = document.getElementById('guardarCarrito')
+usuario = document.getElementById("UsuarioName");
+password = document.querySelector("#Contraseña");
 const inputNombre = document.getElementById('UsuarioName')
-let usuario = document.getElementById("UsuarioName");
-let password = document.querySelector("#Contraseña");
+ClickIngreso = document.querySelector("#IngresarBtn");
+btnSalir = document.getElementById('salirBtn')
+btnBorrarLocal = document.getElementById('BorrarLocal')
+btnSalir = document.getElementById('salirBtn')
 
 
 function guardarDatos(storage) {
     let usuario = document.getElementById("UsuarioName").value;
-    let password = document.querySelector("#Contraseña").value;
+    password = document.querySelector("#Contraseña").value;
 
 
     const user = {
@@ -22,87 +24,73 @@ function guardarDatos(storage) {
         'contra': password,
     }
 
-    if (storage === 'localStorage') {
-        localStorage.setItem('usuario', JSON.stringify(user))
-    }
+    storage === 'localStorage' && localStorage.setItem('usuario', JSON.stringify(user))
+    storage === 'sessionStorage' && sessionStorage.setItem('usuario', JSON.stringify(user))
 
-    if (storage === 'sessionStorage') {
-        sessionStorage.setItem('usuario', JSON.stringify(user))
-    }
 }
 
 function borrarDatos(storage) {
     storage.clear();
 }
 
-
-
+function validarIngreso() {}
 
 btnBorrarLocal.addEventListener('click', () => {
     borrarDatos.localStorage;
 
 })
 
-inputNombre.addEventListener('on change', () => {
-    let usuarioTraido = localStorage.getItem('usuarioN')
-    console.log(usuarioTraido)
-
-    if (usuario == usuarioTraido) {
-        let traerContra = localStorage.getItem('contra')
-        console.log(traerContra);
-    }
-})
-
-
-
 ClickIngreso.addEventListener("click", (e) => {
     e.preventDefault();
-    if (botonRecordame.checked) {
-        guardarDatos('localStorage');
 
-    } else {
-        guardarDatos('sessionStorage');
-    }
-
+    botonRecordame.checked ? guardarDatos('localStorage') : guardarDatos('sessionStorage');
 });
 
 
-window.onload = () => {
-    let usuarioTraido = JSON.parse(localStorage.getItem('user'))
-    if (usuarioTraido) {
-        usuario.value = usuarioTraido.usuario
-        password.value = usuarioTraido.contra
+/* window.onload = () => {
+    let usuarioTraido = JSON.parse(localStorage.getItem('user.nombre'))
+    let contraTraido = JSON.parse(localStorage.getItem('user.contra'))
+    if (usuarioTraido != '') {
+        usuario.value = usuarioTraido
+        password.value = contraTraido
     }
-    //no se como haria para directamente dar por validada la funcion
-}
 
+        //no se como haria para directamente dar por validada la funcion
+} 
+ */
 ClickIngreso.addEventListener("click", () => {
 
-
-    usuario = usuario.value
-    password = password.value
-
-
-    if (usuario == " " || password == " ") {
+    if (usuario == "" || password == "") {
         alert("Algun campo esta incompleto, por favor ingrese su nombre de usuario y la contraseña")
     } else {
-        for (let i = 2; i >= 0; i--) {
-            if (password == userPass) {
-                FormIngreso.remove();
+        if (password === userPass) {
+            FormIngreso.remove();
+            const aca = document.getElementById("InicioCont");
+            aca.innerHTML = `<div class="CartelBienvenida">
+                <h4> Bienvenido de nuevo ${usuario.value}</h4>
+                </div>`;
+            //                <div> <button type="button" id="salirBtn" class="btn btn-danger">Cerrar Sesión </button>
+
+            pase = true;
+        } else {
+            if (i >= 0) {
+                alert("Contraseña Incorrecta. Te quedan" + i + " intentos")
+                FormIngreso.reset();
+                i -= 1
+            } else {
                 const aca = document.getElementById("InicioCont");
                 aca.innerHTML = `<div class="CartelBienvenida">
-                <h4> Bienvenido de nuevo ${usuario}</h4>
-                <div> <button type="button" id="salirBtn" class="btn btn-danger">Cerrar Sesión </button>
+                <h4> Demasiados errores por favor intentelo nuevamente mas tarde</h4>
                 </div>`;
-                pase = true;
-                break;
-            } else {
-                alert("Contraseña Incorrecta. Te quedan " + i + " intentos")
-            };
-        };
-    };
+            }
 
+        };
+
+    }
 });
+
+
+
 
 /* btnSalir.addEventListener('click', () => {
     borrarDatos(sessionStorage);

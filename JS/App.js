@@ -4,7 +4,6 @@ const contenedorProductos = document.getElementById('ProdCont')
 const ShowP = (elementos) => {
     elementos.forEach(producto => {
         const div = document.createElement('div');
-        div.classList.add('NewProd');
         div.innerHTML = `<div class="NewProd">
                             <img src="${producto.img}" class="card" alt="...">
                             <div class"CBdy">
