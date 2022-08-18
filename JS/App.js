@@ -1,4 +1,3 @@
-
 const contenedorProductos = document.getElementById('ProdCont')
 
 const ShowP = (elementos) => {
@@ -19,7 +18,13 @@ const ShowP = (elementos) => {
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', () => {
             carritoIndex(producto.id);
-            alert(`Se agregaron ${producto.cantidad}kg de ${producto.nombre} al carrito`);
+            Toastify({
+                text: `Se agregaron ${producto.cantidad}kg de ${producto.nombre} al carrito`,
+                duration: 800,
+                style: {
+                    background: " #00b09",
+                },
+            }).showToast();
 
         })
     })

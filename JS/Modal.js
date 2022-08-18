@@ -45,3 +45,4 @@ InicioContenedor.addEventListener('click', () => {
 modalInicio.addEventListener('click', (e) => {
     e.stopPropagation();
 })
+

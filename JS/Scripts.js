@@ -12,6 +12,7 @@ ClickIngreso = document.querySelector("#IngresarBtn");
 btnSalir = document.getElementById('salirBtn')
 btnBorrarLocal = document.getElementById('BorrarLocal')
 btnSalir = document.getElementById('salirBtn')
+btnBuscar = document.getElementById('busc')
 
 
 function guardarDatos(storage) {
@@ -46,6 +47,15 @@ ClickIngreso.addEventListener("click", (e) => {
     botonRecordame.checked ? guardarDatos('localStorage') : guardarDatos('sessionStorage');
 });
 
+btnBuscar.addEventListener('click',()=>{
+    Swal.fire({
+        title: 'UPS!',
+        text: 'Lo sentimos todavia no esta listo este boton!',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+    })
+    
+})
 
 /* window.onload = () => {
     let usuarioTraido = JSON.parse(localStorage.getItem('user.nombre'))

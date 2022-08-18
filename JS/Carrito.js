@@ -32,7 +32,7 @@ const carritoIndex = (productoId) => {
         const tomarProd = document.getElementById('tomarP')
 
         eliminarProd.addEventListener('click', () => {
-            carCompras.splice(producto, 1);
+            carCompras.splice(producto.id, 1);
             div.remove(tomarProd);
         })
         

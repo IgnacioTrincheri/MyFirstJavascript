@@ -72,7 +72,7 @@ header h1 {
 
 .modProductos, .Modal-Inicio{
     width: 30rem;
-    height: 10rem;
+    height: auto;
     background-color: whitesmoke;
 }
 
@@ -97,4 +97,9 @@ header h1 {
 img{
     width: 375px;
     height: 250px;
+}
+
+#carCont{
+    height: 4rem;
+    overflow-y:scroll;
 }
