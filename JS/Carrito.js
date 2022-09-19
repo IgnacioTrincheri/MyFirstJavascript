@@ -1,4 +1,4 @@
-const carCompras = []
+/* const carCompras = []
 const totalCuenta = [];
 
 const carritoIndex = (productoId) => {
@@ -54,4 +54,4 @@ if (total != 0) {
     traerTotal.appendChild(MontoDiv)
     MontoDiv.innerHTML = `$${total}`
 
-} */
+} */ 

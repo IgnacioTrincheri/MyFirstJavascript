@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pollo",
+        "precio": 250,
+        "alic": 1.105,
+        "img": "Img/Pll.jpg",
+        "cantidad": 0
+    }, {
+        "id": 2,
+        "nombre": "Cuarto Trasero",
+        "precio": 300,
+        "alic": 1.105,
+        "img": "Img/Patas.jpg",
+        "cantidad": 0
+    }, {
+        "id": 3,
+        "nombre": "Pechuga Deshuesada",
+        "precio": 450,
+        "alic": 1.105,
+        "img": "Img/Pech.jpg",
+        "cantidad": 0
+    }, {
+        "id": 4,
+        "nombre": "Alas",
+        "precio": 100,
+        "alic": 1.105,
+        "img": "Img/Alas.jpg",
+        "cantidad": 0
+    }, {
+        "id": 5,
+        "nombre": "Milanesas",
+        "precio": 350,
+        "alic": 1.21,
+        "img": "Img/Milas.jpg",
+        "cantidad": 0
+    }, {
+        "id": 6,
+        "nombre": "Arrollados de Pollo",
+        "precio": 400,
+        "alic": 1.21,
+        "img": "Img/Arroy.jpg",
+        "cantidad": 0
+    }, {
+        "id": 7,
+        "nombre": "Congelados",
+        "precio": 320,
+        "alic": 1.21,
+        "img": "Img/Congs.jpg",
+        "cantidad": 0
+    }
+]

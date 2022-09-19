@@ -1,4 +1,4 @@
-const contenedorProductos = document.getElementById('ProdCont')
+/* const 
 
 const ShowP = (elementos) => {
     elementos.forEach(producto => {
@@ -30,4 +30,4 @@ const ShowP = (elementos) => {
     })
 }
 
-ShowP(productos)
+ShowP(productos) */

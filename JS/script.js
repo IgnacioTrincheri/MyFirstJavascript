@@ -1,4 +1,4 @@
-//presupuesto solo para usuarios ingresados 
+/* //presupuesto solo para usuarios ingresados 
 
 alert('Bienvenidos a la seccion de presupuestos');
 
@@ -152,4 +152,4 @@ if (pago) {
     alert("El total a pagar es: " + total)
     alert("Muchas gracias vuelva pronto !")
 
-}
+} */

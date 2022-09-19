@@ -1,18 +1,8 @@
-let FormIngreso = document.querySelector("#formulario");
+/*
 userPass = "Avicola";
 pase = false;
 ingreso = false;
 i = 2
-botonRecordame = document.getElementById('RememberMe')
-botonGuardar = document.getElementById('guardarCarrito')
-usuario = document.getElementById("UsuarioName");
-password = document.querySelector("#Contraseña");
-const inputNombre = document.getElementById('UsuarioName')
-ClickIngreso = document.querySelector("#IngresarBtn");
-btnSalir = document.getElementById('salirBtn')
-btnBorrarLocal = document.getElementById('BorrarLocal')
-btnSalir = document.getElementById('salirBtn')
-btnBuscar = document.getElementById('busc')
 
 
 function guardarDatos(storage) {
@@ -38,7 +28,6 @@ function validarIngreso() {}
 
 btnBorrarLocal.addEventListener('click', () => {
     borrarDatos.localStorage;
-
 })
 
 ClickIngreso.addEventListener("click", (e) => {
@@ -68,6 +57,7 @@ btnBuscar.addEventListener('click',()=>{
         //no se como haria para directamente dar por validada la funcion
 } 
  */
+/*
 ClickIngreso.addEventListener("click", () => {
 
     if (usuario == "" || password == "") {
@@ -99,7 +89,7 @@ ClickIngreso.addEventListener("click", () => {
     }
 });
 
-
+ */
 
 
 /* btnSalir.addEventListener('click', () => {

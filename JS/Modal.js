@@ -1,4 +1,4 @@
-//Modal Carrito
+/* //Modal Carrito
 
 const modalContenedor = document.querySelector('.modalCont')
 abrirCarrito = document.getElementById('abrirCar')
@@ -46,3 +46,4 @@ modalInicio.addEventListener('click', (e) => {
     e.stopPropagation();
 })
 
+ */
